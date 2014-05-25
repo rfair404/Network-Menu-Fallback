@@ -16,8 +16,6 @@ function nmf_network_menu($args){
 add_filter('wp_nav_menu_args', 'nmf_network_menu_args' );
 function nmf_network_menu_args($args){
     global $current_site, $current_blog;
-    if($current_blog->blog_id != $current_site->blog_id){
-        $args['fallback_cb']  = 'nmf_network_menu';
-    }
+    $args['fallback_cb'] = ($current_blog->blog_id != $current_site->blog_id) ? 'nmf_network_menu' : 'wp_page_menu';
     return $args;
 }
