@@ -2,7 +2,7 @@
 /*
 * Plugin Name: Network Menu Fallback
 * Author: Russell Fair
-* Version: 0.2
+* Version: 0.1
 * Description: Uses the parent site's menu as the fallback for non-existant menus
 */
 
